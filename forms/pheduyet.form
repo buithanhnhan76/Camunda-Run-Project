@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "label": "Approve/Not Approve",
+      "type": "textfield",
+      "id": "Field_028hap1",
+      "key": "pheduyet",
+      "validate": {
+        "required": true,
+        "regularExpressionPattern": "Approve|Not Approve"
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Gửi",
+      "type": "button",
+      "id": "Field_0al5t3c",
+      "key": "field_16vgds9"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0cnhc9n"
+}

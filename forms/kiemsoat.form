@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "label": "Approve/Not Approve",
+      "type": "textfield",
+      "id": "Field_03dgkoa",
+      "key": "kiemsoat",
+      "validate": {
+        "required": true,
+        "regularExpressionPattern": "Approve|Not Approve"
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Gửi",
+      "type": "button",
+      "id": "Field_1a7wxjb",
+      "key": "field_1qrwty0"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0q04nqw"
+}

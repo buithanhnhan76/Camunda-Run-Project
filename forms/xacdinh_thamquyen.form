@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "label": " Reporting under authority:",
+      "type": "textfield",
+      "id": "Field_02rtv7t",
+      "key": "xacdinhthamquyen",
+      "validate": {
+        "required": true,
+        "regularExpressionPattern": "Head Office/Business Unit"
+      },
+      "description": "Head Office/Business Unit"
+    },
+    {
+      "action": "submit",
+      "label": "Gửi báo cáo",
+      "type": "button",
+      "id": "Field_0nz17uh",
+      "key": "field_0shxc15"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0pg1hk9"
+}
