@@ -100,11 +100,11 @@
     <bpmn:sequenceFlow id="Flow_0uh6mku" name="Not Approve" sourceRef="Gateway_0ic5w2x" targetRef="Activity_1j2yy9m">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{kiemsoat=='Not Approve'}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:task id="Activity_11euzvk" name="5. Make an appraisal report">
+    <bpmn:manualTask id="Activity_11euzvk" name="5. Make an appraisal report">
       <bpmn:incoming>Flow_1qfodi3</bpmn:incoming>
       <bpmn:incoming>Flow_12n9jlm</bpmn:incoming>
       <bpmn:outgoing>Flow_18fhmge</bpmn:outgoing>
-    </bpmn:task>
+    </bpmn:manualTask>
     <bpmn:textAnnotation id="TextAnnotation_0xyk4ex">
       <bpmn:text>Credit proposal report
 Customer Profile</bpmn:text>
@@ -249,7 +249,7 @@ Customer Profile</bpmn:text>
       <bpmndi:BPMNShape id="Activity_1u413t6_di" bpmnElement="Activity_1j2yy9m">
         <dc:Bounds x="310" y="260" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_09uojma_di" bpmnElement="Activity_11euzvk">
+      <bpmndi:BPMNShape id="Activity_0hzckoo_di" bpmnElement="Activity_11euzvk">
         <dc:Bounds x="810" y="1010" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Association_1wujkyv_di" bpmnElement="Association_1wujkyv">
