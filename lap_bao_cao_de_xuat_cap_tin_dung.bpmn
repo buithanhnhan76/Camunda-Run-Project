@@ -111,11 +111,11 @@ Customer Profile</bpmn:text>
     </bpmn:textAnnotation>
     <bpmn:association id="Association_1wujkyv" sourceRef="DataObjectReference_1nzr526" targetRef="TextAnnotation_0xyk4ex" />
     <bpmn:textAnnotation id="TextAnnotation_1pefcd4">
-      <bpmn:text>Credit proposal report signed by the controller</bpmn:text>
+      <bpmn:text>Credit proposal report requires controller's signature</bpmn:text>
     </bpmn:textAnnotation>
     <bpmn:association id="Association_1lcs4f1" sourceRef="DataObjectReference_0fnh602" targetRef="TextAnnotation_1pefcd4" />
     <bpmn:textAnnotation id="TextAnnotation_140axtw">
-      <bpmn:text>Credit proposal report signed by the controller, the business unit's board of directors</bpmn:text>
+      <bpmn:text>Credit proposal report signed by the controller, requires the business unit's board of directors signature</bpmn:text>
     </bpmn:textAnnotation>
     <bpmn:association id="Association_1bu1n5j" sourceRef="DataObjectReference_1a07ofl" targetRef="TextAnnotation_140axtw" />
   </bpmn:process>
@@ -132,6 +132,9 @@ Customer Profile</bpmn:text>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_14774qc_di" bpmnElement="Lane_14774qc" isHorizontal="true">
         <dc:Bounds x="170" y="400" width="1020" height="420" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_140axtw_di" bpmnElement="TextAnnotation_140axtw">
+        <dc:Bounds x="590" y="830" width="99.99156545209178" height="141.70040485829958" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0uh6mku_di" bpmnElement="Flow_0uh6mku" bioc:stroke="#000" bioc:fill="#fff">
         <di:waypoint x="475" y="690" />
@@ -247,10 +250,7 @@ Customer Profile</bpmn:text>
         <dc:Bounds x="430" y="91" width="169.99372068044062" height="49.990322808632314" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="TextAnnotation_1pefcd4_di" bpmnElement="TextAnnotation_1pefcd4">
-        <dc:Bounds x="460" y="460" width="99.99274099883856" height="53.426248548199766" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_140axtw_di" bpmnElement="TextAnnotation_140axtw">
-        <dc:Bounds x="590" y="820" width="99.99274099883856" height="109.17537746806039" />
+        <dc:Bounds x="460" y="460" width="99.99156545209178" height="68.82591093117409" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Association_1wujkyv_di" bpmnElement="Association_1wujkyv">
         <di:waypoint x="378" y="172" />
@@ -258,11 +258,11 @@ Customer Profile</bpmn:text>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Association_1lcs4f1_di" bpmnElement="Association_1lcs4f1">
         <di:waypoint x="552" y="525" />
-        <di:waypoint x="538" y="513" />
+        <di:waypoint x="557" y="529" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Association_1bu1n5j_di" bpmnElement="Association_1bu1n5j">
-        <di:waypoint x="578" y="937" />
-        <di:waypoint x="590" y="923" />
+        <di:waypoint x="578" y="939" />
+        <di:waypoint x="590" y="927" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="DataOutputAssociation_0raxtk4_di" bpmnElement="DataOutputAssociation_0raxtk4">
         <di:waypoint x="690" y="610" />
