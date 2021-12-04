@@ -74,7 +74,7 @@
       <bpmn:outgoing>Flow_098mdc2</bpmn:outgoing>
       <bpmn:outgoing>Flow_0uh6mku</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:userTask id="Activity_1qk23oq" name="2. Determination of authority" camunda:formKey="camunda-forms:deployment:xacdinh_thamquyen.form">
+    <bpmn:userTask id="Activity_1qk23oq" name="2. Determining authority" camunda:formKey="camunda-forms:deployment:xacdinh_thamquyen.form">
       <bpmn:incoming>Flow_1dc0zdb</bpmn:incoming>
       <bpmn:outgoing>Flow_1cwuyy2</bpmn:outgoing>
     </bpmn:userTask>
@@ -133,17 +133,6 @@ Customer Profile</bpmn:text>
       <bpmndi:BPMNShape id="Lane_14774qc_di" bpmnElement="Lane_14774qc" isHorizontal="true">
         <dc:Bounds x="170" y="400" width="1020" height="420" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_140axtw_di" bpmnElement="TextAnnotation_140axtw">
-        <dc:Bounds x="590" y="820" width="99.99274099883856" height="109.17537746806039" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_1jttac8_di" bpmnElement="Flow_1jttac8">
-        <di:waypoint x="248" y="300" />
-        <di:waypoint x="310" y="300" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_18fhmge_di" bpmnElement="Flow_18fhmge">
-        <di:waypoint x="910" y="1050" />
-        <di:waypoint x="932" y="1050" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0uh6mku_di" bpmnElement="Flow_0uh6mku" bioc:stroke="#000" bioc:fill="#fff">
         <di:waypoint x="475" y="690" />
         <di:waypoint x="350" y="690" />
@@ -151,6 +140,18 @@ Customer Profile</bpmn:text>
         <bpmndi:BPMNLabel>
           <dc:Bounds x="270" y="554" width="62" height="14" />
         </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1jttac8_di" bpmnElement="Flow_1jttac8">
+        <di:waypoint x="248" y="300" />
+        <di:waypoint x="310" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1dc0zdb_di" bpmnElement="Flow_1dc0zdb">
+        <di:waypoint x="410" y="300" />
+        <di:waypoint x="490" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18fhmge_di" bpmnElement="Flow_18fhmge">
+        <di:waypoint x="910" y="1050" />
+        <di:waypoint x="932" y="1050" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_12n9jlm_di" bpmnElement="Flow_12n9jlm" bioc:stroke="#000" bioc:fill="#fff">
         <di:waypoint x="715" y="300" />
@@ -187,10 +188,6 @@ Customer Profile</bpmn:text>
         <bpmndi:BPMNLabel>
           <dc:Bounds x="703" y="483" width="74" height="27" />
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1dc0zdb_di" bpmnElement="Flow_1dc0zdb">
-        <di:waypoint x="410" y="300" />
-        <di:waypoint x="490" y="300" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0x0vpxi_di" bpmnElement="Flow_0x0vpxi">
         <di:waypoint x="650" y="690" />
@@ -234,12 +231,6 @@ Customer Profile</bpmn:text>
       <bpmndi:BPMNShape id="Activity_0bwi7k4_di" bpmnElement="Activity_1pu3213">
         <dc:Bounds x="460" y="1010" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_0xyk4ex_di" bpmnElement="TextAnnotation_0xyk4ex">
-        <dc:Bounds x="430" y="91" width="169.99372068044062" height="49.990322808632314" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_1pefcd4_di" bpmnElement="TextAnnotation_1pefcd4">
-        <dc:Bounds x="460" y="460" width="99.99274099883856" height="53.426248548199766" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="DataObjectReference_0fnh602_di" bpmnElement="DataObjectReference_0fnh602" bioc:stroke="#000" bioc:fill="#fff">
         <dc:Bounds x="552" y="515" width="36" height="50" />
         <bpmndi:BPMNLabel>
@@ -251,6 +242,15 @@ Customer Profile</bpmn:text>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0hzckoo_di" bpmnElement="Activity_11euzvk">
         <dc:Bounds x="810" y="1010" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0xyk4ex_di" bpmnElement="TextAnnotation_0xyk4ex">
+        <dc:Bounds x="430" y="91" width="169.99372068044062" height="49.990322808632314" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1pefcd4_di" bpmnElement="TextAnnotation_1pefcd4">
+        <dc:Bounds x="460" y="460" width="99.99274099883856" height="53.426248548199766" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_140axtw_di" bpmnElement="TextAnnotation_140axtw">
+        <dc:Bounds x="590" y="820" width="99.99274099883856" height="109.17537746806039" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Association_1wujkyv_di" bpmnElement="Association_1wujkyv">
         <di:waypoint x="378" y="172" />
@@ -264,10 +264,6 @@ Customer Profile</bpmn:text>
         <di:waypoint x="578" y="937" />
         <di:waypoint x="590" y="923" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="DataOutputAssociation_0lc7y9u_di" bpmnElement="DataOutputAssociation_0lc7y9u">
-        <di:waypoint x="360" y="260" />
-        <di:waypoint x="360" y="216" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="DataOutputAssociation_0raxtk4_di" bpmnElement="DataOutputAssociation_0raxtk4">
         <di:waypoint x="690" y="610" />
         <di:waypoint x="586" y="565" />
@@ -275,6 +271,10 @@ Customer Profile</bpmn:text>
       <bpmndi:BPMNEdge id="DataOutputAssociation_035zk5q_di" bpmnElement="DataOutputAssociation_035zk5q">
         <di:waypoint x="534" y="1010" />
         <di:waypoint x="549" y="985" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="DataOutputAssociation_0lc7y9u_di" bpmnElement="DataOutputAssociation_0lc7y9u">
+        <di:waypoint x="360" y="260" />
+        <di:waypoint x="360" y="216" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
