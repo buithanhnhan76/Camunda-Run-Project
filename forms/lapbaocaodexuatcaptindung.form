@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "label": "Your name",
+      "type": "textfield",
+      "id": "Field_1a66stg",
+      "key": "hoten",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Identity card number",
+      "type": "textfield",
+      "id": "Field_1o65nsx",
+      "key": "cmnd",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Phone number",
+      "type": "number",
+      "id": "Field_0jdpu4l",
+      "key": "dienthoai",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Job",
+      "type": "textfield",
+      "id": "Field_050giej",
+      "key": "nghenghiep",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Amount of money",
+      "type": "textfield",
+      "id": "Field_13vuyah",
+      "key": "sotien",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Loan Purpose",
+      "type": "textfield",
+      "id": "Field_0ukgrgo",
+      "key": "mucdich",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Secured asset information",
+      "type": "textfield",
+      "id": "Field_1b7az7s",
+      "key": "taisandambao",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": " I agree with the bank's regulations",
+      "type": "checkbox",
+      "id": "Field_1ri1wsz",
+      "key": "dongyquydinh"
+    }
+  ],
+  "type": "default",
+  "id": "Form_110r0ka"
+}

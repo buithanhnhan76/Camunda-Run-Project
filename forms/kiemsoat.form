@@ -13,7 +13,7 @@
     },
     {
       "action": "submit",
-      "label": "Gửi",
+      "label": "Send",
       "type": "button",
       "id": "Field_1a7wxjb",
       "key": "field_1qrwty0"

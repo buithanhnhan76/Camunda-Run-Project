@@ -14,7 +14,7 @@
     },
     {
       "action": "submit",
-      "label": "Gửi báo cáo",
+      "label": "Send report",
       "type": "button",
       "id": "Field_0nz17uh",
       "key": "field_0shxc15"

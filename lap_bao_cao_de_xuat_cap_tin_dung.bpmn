@@ -12,14 +12,14 @@
       <bpmn:lane id="Lane_1ubh8h0" name="Business unit leader">
         <bpmn:flowNodeRef>Event_0uey1e3</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_1tnm9m2</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_11euzvk</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1pu3213</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_11euzvk</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_0wtmfv4" name="Customer relations officer at business unit">
         <bpmn:flowNodeRef>Event_03zns98</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_0tjdtli</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_1j2yy9m</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1qk23oq</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1j2yy9m</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:endEvent id="Event_0uey1e3">
@@ -42,23 +42,9 @@
       <bpmn:outgoing>Flow_00gbqug</bpmn:outgoing>
       <bpmn:outgoing>Flow_12n9jlm</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:manualTask id="Activity_1j2yy9m" name="1. Make a credit proposal report">
-      <bpmn:incoming>Flow_0uh6mku</bpmn:incoming>
-      <bpmn:incoming>Flow_1jttac8</bpmn:incoming>
-      <bpmn:outgoing>Flow_1dc0zdb</bpmn:outgoing>
-      <bpmn:dataOutputAssociation id="DataOutputAssociation_0lc7y9u">
-        <bpmn:targetRef>DataObjectReference_1nzr526</bpmn:targetRef>
-      </bpmn:dataOutputAssociation>
-    </bpmn:manualTask>
-    <bpmn:manualTask id="Activity_11euzvk" name="5. Make an appraisal report">
-      <bpmn:incoming>Flow_1qfodi3</bpmn:incoming>
-      <bpmn:incoming>Flow_12n9jlm</bpmn:incoming>
-      <bpmn:outgoing>Flow_18fhmge</bpmn:outgoing>
-    </bpmn:manualTask>
     <bpmn:sequenceFlow id="Flow_1cwuyy2" sourceRef="Activity_1qk23oq" targetRef="Gateway_0tjdtli" />
     <bpmn:sequenceFlow id="Flow_02j9xvx" sourceRef="Activity_1pu3213" targetRef="Gateway_1tnm9m2" />
     <bpmn:sequenceFlow id="Flow_0x0vpxi" sourceRef="Activity_0ldg1to" targetRef="Gateway_0ic5w2x" />
-    <bpmn:sequenceFlow id="Flow_1dc0zdb" sourceRef="Activity_1j2yy9m" targetRef="Activity_1qk23oq" />
     <bpmn:sequenceFlow id="Flow_00gbqug" name="Authority of the Head Office" sourceRef="Gateway_0tjdtli" targetRef="Activity_0ldg1to">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{xacdinhthamquyen=='Head Office'}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
@@ -74,11 +60,7 @@
     <bpmn:sequenceFlow id="Flow_12n9jlm" name="Authority of the business unit" sourceRef="Gateway_0tjdtli" targetRef="Activity_11euzvk">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{xacdinhthamquyen=='Business Unit'}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_0uh6mku" name="Not Approve" sourceRef="Gateway_0ic5w2x" targetRef="Activity_1j2yy9m">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{kiemsoat=='Not Approve'}</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_18fhmge" sourceRef="Activity_11euzvk" targetRef="Event_0uey1e3" />
-    <bpmn:sequenceFlow id="Flow_1jttac8" sourceRef="Event_03zns98" targetRef="Activity_1j2yy9m" />
     <bpmn:userTask id="Activity_0ldg1to" name="3. Checkup" camunda:formKey="camunda-forms:deployment:kiemsoat.form">
       <bpmn:incoming>Flow_00gbqug</bpmn:incoming>
       <bpmn:incoming>Flow_0q51w1u</bpmn:incoming>
@@ -105,6 +87,24 @@
     </bpmn:userTask>
     <bpmn:dataObjectReference id="DataObjectReference_0fnh602" dataObjectRef="DataObject_023i1nj" />
     <bpmn:dataObject id="DataObject_023i1nj" />
+    <bpmn:userTask id="Activity_1j2yy9m" name="1. Make a credit proposal report" camunda:formRef="Form_110r0ka" camunda:formRefBinding="deployment">
+      <bpmn:incoming>Flow_1jttac8</bpmn:incoming>
+      <bpmn:incoming>Flow_0uh6mku</bpmn:incoming>
+      <bpmn:outgoing>Flow_1dc0zdb</bpmn:outgoing>
+      <bpmn:dataOutputAssociation id="DataOutputAssociation_0lc7y9u">
+        <bpmn:targetRef>DataObjectReference_1nzr526</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1dc0zdb" sourceRef="Activity_1j2yy9m" targetRef="Activity_1qk23oq" />
+    <bpmn:sequenceFlow id="Flow_1jttac8" sourceRef="Event_03zns98" targetRef="Activity_1j2yy9m" />
+    <bpmn:sequenceFlow id="Flow_0uh6mku" name="Not Approve" sourceRef="Gateway_0ic5w2x" targetRef="Activity_1j2yy9m">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{kiemsoat=='Not Approve'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:task id="Activity_11euzvk" name="5. Make an appraisal report">
+      <bpmn:incoming>Flow_1qfodi3</bpmn:incoming>
+      <bpmn:incoming>Flow_12n9jlm</bpmn:incoming>
+      <bpmn:outgoing>Flow_18fhmge</bpmn:outgoing>
+    </bpmn:task>
     <bpmn:textAnnotation id="TextAnnotation_0xyk4ex">
       <bpmn:text>Credit proposal report
 Customer Profile</bpmn:text>
@@ -222,12 +222,6 @@ Customer Profile</bpmn:text>
       <bpmndi:BPMNShape id="Gateway_0tjdtli_di" bpmnElement="Gateway_0tjdtli" isMarkerVisible="true">
         <dc:Bounds x="665" y="275" width="50" height="50" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_08dpi5g_di" bpmnElement="Activity_1j2yy9m">
-        <dc:Bounds x="310" y="260" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_19127xw_di" bpmnElement="Activity_11euzvk">
-        <dc:Bounds x="810" y="1010" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_09v3suf_di" bpmnElement="Activity_0ldg1to">
         <dc:Bounds x="640" y="610" width="100" height="80" />
       </bpmndi:BPMNShape>
@@ -252,6 +246,12 @@ Customer Profile</bpmn:text>
           <dc:Bounds x="516" y="493" width="88" height="53" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1u413t6_di" bpmnElement="Activity_1j2yy9m">
+        <dc:Bounds x="310" y="260" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_09uojma_di" bpmnElement="Activity_11euzvk">
+        <dc:Bounds x="810" y="1010" width="100" height="80" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Association_1wujkyv_di" bpmnElement="Association_1wujkyv">
         <di:waypoint x="378" y="172" />
         <di:waypoint x="430" y="137" />
@@ -266,7 +266,7 @@ Customer Profile</bpmn:text>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="DataOutputAssociation_0lc7y9u_di" bpmnElement="DataOutputAssociation_0lc7y9u">
         <di:waypoint x="360" y="260" />
-        <di:waypoint x="360" y="220" />
+        <di:waypoint x="360" y="216" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="DataOutputAssociation_0raxtk4_di" bpmnElement="DataOutputAssociation_0raxtk4">
         <di:waypoint x="690" y="610" />
